@@ -5,7 +5,7 @@ import { NotFoundPage } from 'pages/NotFoundPage';
 
 
 export enum AppRoutes {
-	MAIN = 'main',
+	MAIN = '/',
 	ABOUT = 'about',
 	NOT_FOUND = 'not_found',
 }

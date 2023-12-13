@@ -1,7 +1,8 @@
 import { Link, Route, Routes } from 'react-router-dom';
-import { AboutPage } from "./pages/aboutPage/AboutPage";
-import { MainPage } from "./pages/mainPage/MainPage";
-import { NotFoundPage } from './pages/NotFoundPage';
+import {RoutePath} from './router-config/routeConfig'
+// import { AboutPage } from "./pages/aboutPage/AboutPage";
+// import { MainPage } from "./pages/mainPage/MainPage";
+// import { NotFoundPage } from './pages/NotFoundPage';
 
 
 function App() {
@@ -14,9 +15,9 @@ function App() {
       
 
       <Routes>
-        <Route path={'/about'} element={<AboutPage />} />
-        <Route path={'/'} element={<MainPage />} />
-        <Route path={'*'} element={<NotFoundPage />} />
+        { RoutePath.map(({path, element})=>
+        <Route key={path} path={path} element={element}/>)}
+        
       </Routes>
 
     </>
